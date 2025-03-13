@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <!-- Etiquetas meta aqui -->
+    <title>Corte &amp; Arte - Reservas</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <img src="/img/logo.jpg" alt="C&amp;A" width="200" height="200">
+        <h1>Corte &amp; Arte</h1>
+        <p>Bienvenido a Corte &amp; Arte: Una experiencia de belleza y creatividad, donde la pasion por el corte y el arte se fusionan para brindar un look perfecto.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="peluqueria.html">Peluqueria</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="equipo.html">Equipo</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Realizar una reserva</h2>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div>
+                <label for="email">Correo electronico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div>
+                <label for="sala">Sala:</label>
+                <select id="sala" name="sala" required>
+                    <option value="" disabled selected>Seleccione una sala</option>
+                    <option value="norte">Sala Norte</option>
+                    <option value="sur">Sala Sur</option>
+                    
+                </select>
+            </div>
+            <div>
+                <label for="estilista">Estilista:</label>
+                <select id="estilista" name="estilista" required>
+                    <option value="" disabled selected>Seleccione un estilista</option>
+                    <option value="estilista1">Estilista 1</option>
+                    <option value="estilista2">Estilista 2</option>
+                    <option value="estilista3">Estilista 3</option>
+                </select>
+            </div>
+            <div>
+                <label for="fecha">Fecha de la reserva:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+                <label>Horas disponibles:</label>
+                <div>
+                    <input type="checkbox" id="hora1" name="horas" value="09:00">
+                    <label for="hora1">09:00 - 09:30</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hora2" name="horas" value="09:30">
+                    <label for="hora2">09:30 - 10:00</label>
+                </div>
+            <div>
+                <input type="submit" value="Reservar">
+            </div>
+    </section>
+    <footer>
+        <p>© 2025 Corte &amp; Arte - <a href="mailto:contacto@corteandarte.com">contacto@corteandarte.com</a></p>
+    </footer>
+</body>
+</html>
