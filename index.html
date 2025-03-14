@@ -1,101 +1,174 @@
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-    <title>Corte &amp; Arte - Peluqueria</title>
-    <meta name="description" content="Descripcion de la pagina">
-    <meta name="keywords" content="palabras clave, separadas por comas">
+    <title>Corte &amp; Arte - Peluquería</title>
+    <meta name="description" content="Corte & Arte: Una experiencia de belleza y creatividad para un look perfecto">
+    <meta name="keywords" content="peluquería, corte de pelo, manicura, pedicura, belleza, estilismo">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-   
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scripts.js"></script>
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="logo.png" alt="C&amp;A" width="200" height="200"></a>
-        <h1>Corte &amp; Arte - Peluqueria</h1>
-        <p>Bienvenido a Corte &amp; Arte: Una experiencia de belleza y creatividad, donde la pasion por el corte y el arte se fusionan para brindar un look perfecto.</p>
-        <div class="header-right"> 
-            <div class="icon-container">
-                <button class="login-button">
-                    <ion-icon name="person-outline"></ion-icon>
-                    Iniciar Sesión
-                </button>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <ion-icon name="cut-outline"></ion-icon>
+                <span>Corte &amp; Arte</span>
             </div>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="peluqueria.html">Peluqueria</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="equipo.html">Equipo</a></li>
-        </ul>
-    </nav>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="peluqueria.html">
+                            <ion-icon name="cut-outline"></ion-icon>
+                            <span>Peluquería</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reservas.html">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            <span>Reservas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="equipo.html">
+                            <ion-icon name="people-outline"></ion-icon>
+                            <span>Equipo</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-    <section>
-        <h2>Galeria de fotos</h2>
-        <ul>
-            <!-- Agregarem mas fotos segun sea necesario -->
-            <li><img src="/img/foto1.jpg" alt="Foto 1"></li>
-            <li><img src="/img/foto2.jpg" alt="Foto 2"></li>
-            <li><img src="/img/foto3.jpg" alt="Foto 3"></li>
-        </ul>
-    </section>
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 class="visually-hidden">Corte &amp; Arte</h1>
+                <button class="reserve-button" onclick="window.location.href='reservas.html'">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <span>Reservar</span>
+                </button>
+            </header>
 
-    <section>
-        <h2>Testimonios</h2>
-        <blockquote>
-            <p>"La peluqueria de Corte &amp; Arte me ha ayudado a sentirme mas confiada en mi apariencia." - Cliente satisfecho</p>
-        </blockquote>
-        <blockquote>
-            <p>"La manicura de Corte &amp; Arte me ha brindado un resultado increible en tan solo unas semanas." - Cliente satisfecho</p>
-        </blockquote>
-        <blockquote>
-            <p>"La pedicura de Corte &amp; Arte ha sido una experiencia maravillosa y confortable." - Cliente satisfecho</p>
-        </blockquote>
+            <!-- Gallery Section -->
+            <section class="gallery-section">
+                <div class="section-header">
+                    <h2>Galería</h2>
+                    <p>Conoce nuestras instalaciones</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="img/zona-norte.jpg" alt="Zona Norte">
+                        <div class="gallery-caption">Zona Norte</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/zona-kids.jpg" alt="Zona Kids">
+                        <div class="gallery-caption">Zona Kids</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/zona-unisex.jpg" alt="Zona Unisex">
+                        <div class="gallery-caption">Zona Unisex</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/zona-spa.jpg" alt="Zona Spa">
+                        <div class="gallery-caption">Zona Spa</div>
+                    </div>
+                </div>
+            </section>
 
-    </section>
-    
+            <!-- Services Section -->
+            <section class="services-section">
+                <div class="section-header">
+                    <h2>Servicios ofrecidos</h2>
+                    <p>Descubre nuestros servicios</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <img src="img/corte-pelo.jpg" alt="Corte de pelo">
+                        <div class="service-caption">Corte de pelo</div>
+                    </div>
+                    <div class="service-item">
+                        <img src="img/peinado.jpg" alt="Peinado">
+                        <div class="service-caption">Peinado</div>
+                    </div>
+                    <div class="service-item">
+                        <img src="img/manicura.jpg" alt="Manicura">
+                        <div class="service-caption">Manicura</div>
+                    </div>
+                    <div class="service-item">
+                        <img src="img/pedicura.jpg" alt="Pedicura">
+                        <div class="service-caption">Pedicura</div>
+                    </div>
+                    <div class="service-item">
+                        <img src="img/coloracion.jpg" alt="Coloración">
+                        <div class="service-caption">Coloración</div>
+                    </div>
+                    <div class="service-item">
+                        <img src="img/tratamientos.jpg" alt="Tratamientos">
+                        <div class="service-caption">Tratamientos</div>
+                    </div>
+                </div>
+            </section>
 
-    <section>
-        <h2>Servicios ofrecidos</h2>
-        <ul>
-            <li>Corte de cabello</li>
-            <li>Peinado</li>
-            <li>Manicura</li>
-            <li>Pedicura</li>
-        </ul>
-    </section>
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <div class="section-header">
+                    <h2>Contacto</h2>
+                    <p>Estamos para atenderte</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <p>Calle 123, #456<br>Ciudad, País</p>
+                        </div>
+                        <div class="contact-item">
+                            <ion-icon name="time-outline"></ion-icon>
+                            <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        </div>
+                        <div class="contact-item">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <p>+123 456 7890</p>
+                        </div>
+                        <div class="contact-item">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <p>contacto@corteandarte.com</p>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <textarea placeholder="Mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </section>
 
-    <section>
-        <h2>Horarios y ubicacion</h2>
-        <p>Abrimos de lunes a viernes de 9:00 a 18:00.</p>
-        <address>
-            <p>Corte &amp; Arte<br>Calle 123, #456<br>Ciudad, Pais</p>
-        </address>
-    </section>
-
-    <section>
-        <h2>Formulario de contacto</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Correo electronico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
-    
-    <footer>
-        <a href="https://www.facebook.com/corteandarte"><img src="Facebook.png" alt="Facebook"></a></li>
-        <a href="https://www.instagram.com/corteandarte"><img src="Instagram.png" alt="Instagram"></a></li>
-        <a href="https://twitter.com/corteandarte"><img src="X.png" alt="Twitter"></a></li>
-        <p>© 2025 Corte &amp; Arte</p>
-    </footer>
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/corteandarte">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/corteandarte">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://twitter.com/corteandarte">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </div>
+                <p>© 2025 Corte &amp; Arte</p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>

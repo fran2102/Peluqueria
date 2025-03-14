@@ -1,108 +1,147 @@
-
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
-    <!-- Etiquetas meta aqui -->
     <title>Corte &amp; Arte - Peluqueria</title>
+    <meta name="description" content="Descripcion de nuestras salas de peluquería">
+    <meta name="keywords" content="peluquería, salas, servicios, belleza">
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scripts.js"></script>
 </head>
 <body>
-    <header>
-        <img src="/img/logo.jpg" alt="C&amp;A" width="200" height="200">
-        <h1>Corte &amp; Arte</h1>
-        <p>Bienvenido a Corte &amp; Arte: Una experiencia de belleza y creatividad, donde la pasion por el corte y el arte se fusionan para brindar un look perfecto.</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="peluqueria.html">Peluqueria</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="equipo.html">Equipo</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h2>Nuestras Salas de Peluqueria</h2>
-        <article>
-            <h3>Sala Norte</h3>
-            <p>La Sala Norte es una sala de belleza y peluqueria moderna y confortable, ubicada en el area norte de nuestra ubicacion. Nuestra Sala Norte ofrece un amplio rango de servicios de belleza y peluqueria, incluyendo:</p>
-            <img src="sala1.jpg" alt="Foto de la Sala Norte">
-            <table>
-                <caption>Servicios e Instalaciones de la Sala Norte</caption>
-                <thead>
-                    <tr>
-                        <th>Servicio/Instalacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Corte de cabello</td>
-                    </tr>
-                    <tr>
-                        <td>Peinado</td>
-                    </tr>
-                    <tr>
-                        <td>Manicura</td>
-                    </tr>
-                    <tr>
-                        <td>Pedicura</td>
-                    </tr>
-                    <tr>
-                        <td>Tinte y color</td>
-                    </tr>
-                    <tr>
-                        <td>Depilacion</td>
-                    </tr>
-                    <tr>
-                        <td>Maquillaje</td>
-                    </tr>
-                    <tr>
-                        <td>Tratamiento capilar</td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
-        <article>
-            <h3>Sala Sur</h3>
-            <p>La Sala Sur es una sala de belleza y peluqueria moderna y confortable, ubicada en el area norte de nuestra ubicacion. Nuestra Sala Norte ofrece un amplio rango de servicios de belleza y peluqueria, incluyendo:</p>
-            <img src="sala2.jpg" alt="Foto de la Sala Sur">
-            <table>
-                <caption>Servicios e Instalaciones de la Sala Norte</caption>
-                <thead>
-                    <tr>
-                        <th>Servicio/Instalacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Corte de cabello</td>
-                    </tr>
-                    <tr>
-                        <td>Peinado</td>
-                    </tr>
-                    <tr>
-                        <td>Manicura</td>
-                    </tr>
-                    <tr>
-                        <td>Pedicura</td>
-                    </tr>
-                    <tr>
-                        <td>Tinte y color</td>
-                    </tr>
-                    <tr>
-                        <td>Depilacion</td>
-                    </tr>
-                    <tr>
-                        <td>Maquillaje</td>
-                    </tr>
-                    <tr>
-                        <td>Tratamiento capilar</td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
-    </section>
-    <footer>
-        <p>© 2025 Corte &amp; Arte - <a href="mailto:contacto@corteandarte.com">contacto@corteandarte.com</a></p>
-    </footer>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <ion-icon name="cut-outline"></ion-icon>
+                <span>Corte &amp; Arte</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="peluqueria.html">
+                            <ion-icon name="cut-outline"></ion-icon>
+                            <span>Peluquería</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reservas.html">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            <span>Reservas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="equipo.html">
+                            <ion-icon name="people-outline"></ion-icon>
+                            <span>Equipo</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 class="visually-hidden">Corte &amp; Arte</h1>
+                <button class="reserve-button" onclick="window.location.href='reservas.html'">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <span>Reservar</span>
+                </button>
+            </header>
+
+            <!-- Salas Section -->
+            <section class="salas-section">
+                <div class="section-header">
+                    <h2>Salas Especializadas</h2>
+                    <p>Conoce nuestras instalaciones y servicios</p>
+                </div>
+
+                <!-- Sala Norte -->
+                <article class="sala-item">
+                    <div class="sala-header">
+                        <h3>Sala Norte</h3>
+                    </div>
+                    <div class="sala-content">
+                        <div class="sala-image">
+                            <img src="img/sala1.jpg" alt="Foto de la Sala Norte">
+                        </div>
+                        <div class="sala-description">
+                            <p>La Sala Norte es una sala de belleza y peluquería moderna y confortable, ubicada en el área norte de nuestra ubicación. Nuestra Sala Norte ofrece un amplio rango de servicios de belleza y peluquería.</p>
+
+                            <div class="services-table">
+                                <h4>Servicios e Instalaciones</h4>
+                                <ul class="services-list">
+                                    <li>Corte de cabello</li>
+                                    <li>Peinado</li>
+                                    <li>Manicura</li>
+                                    <li>Pedicura</li>
+                                    <li>Tinte y color</li>
+                                    <li>Depilación</li>
+                                    <li>Maquillaje</li>
+                                    <li>Tratamiento capilar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sala Sur -->
+                <article class="sala-item">
+                    <div class="sala-header">
+                        <h3>Sala Sur</h3>
+                    </div>
+                    <div class="sala-content">
+                        <div class="sala-image">
+                            <img src="img/sala2.jpg" alt="Foto de la Sala Sur">
+                        </div>
+                        <div class="sala-description">
+                            <p>La Sala Sur es una sala de belleza y peluquería moderna y confortable, ubicada en el área sur de nuestra ubicación. Nuestra Sala Sur ofrece un amplio rango de servicios de belleza y peluquería.</p>
+
+                            <div class="services-table">
+                                <h4>Servicios e Instalaciones</h4>
+                                <ul class="services-list">
+                                    <li>Corte de cabello</li>
+                                    <li>Peinado</li>
+                                    <li>Manicura</li>
+                                    <li>Pedicura</li>
+                                    <li>Tinte y color</li>
+                                    <li>Depilación</li>
+                                    <li>Maquillaje</li>
+                                    <li>Tratamiento capilar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="footer-content">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://twitter.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </div>
+                    <p>© 2025 Corte &amp; Arte - <a href="mailto:contacto@corteandarte.com">contacto@corteandarte.com</a></p>
+                </div>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>

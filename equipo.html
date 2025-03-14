@@ -2,109 +2,165 @@
 <html lang="es">
 <head>
     <title>Corte &amp; Arte - Equipo</title>
+    <meta name="description" content="Conoce a nuestro equipo de profesionales de peluquería">
+    <meta name="keywords" content="peluquería, equipo, profesionales, estilistas, belleza">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scripts.js"></script>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="C&amp;A" width="200" height="200">
-        <h1>Corte &amp; Arte</h1>
-        <p>Bienvenido a Corte &amp; Arte: Una experiencia de belleza y creatividad, donde la pasion por el corte y el arte se fusionan para brindar un look perfecto.</p>
-        <div class="header-right">
-            <!-- Añade este botón de inicio de sesión -->
-            <button class="login-button">Iniciar Sesión</button>
-            <!-- Añade este icono al lado derecho -->
-            <div class="icon-container">
-                <img src="/img/icon.png" alt="Icono" width="32" height="32">
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <ion-icon name="cut-outline"></ion-icon>
+                <span>Corte &amp; Arte</span>
             </div>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="peluqueria.html">Peluqueria</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-            <li><a href="equipo.html">Equipo</a></li>
-            
-        </ul>
-    </nav>
-    <section>
-        <h2>Sobre nosotros</h2>
-        <p>Nuestra peluqueria se enfoca en brindar la mejor atencion y la mas alta calidad en el cuidado de la belleza. Nuestro equipo de profesionales esta compuesto por personas con una formacion minima de 5 anos en el sector de la belleza y con mas de X anos de experiencia en el mundo de la peluqueria.</p>
-        <p>Nuestro equipo se caracteriza por su profesionalidad, pasion y dedicacion a la excelencia. Todos nuestros profesionales han recibido formacion y certificacion de alta calidad, lo que les permite ofrecer un trato personalizado y cuidadoso a cada cliente.</p>
-        <p>Nuestro objetivo es ofrecer un servicio de alta calidad y garantizar que cada cliente se sienta satisfecho con el resultado final. Nuestro equipo esta compuesto por profesionales capacitados y comprometidos, lo que les permite brindar un servicio de primera clase a todos nuestros clientes.</p>
-    </section>
-    <section>
-        <h3>Nuestro Equipo</h3>
-        <!-- Cambiar divs por articles -->
-        <div>
-            <!-- Agregaremos fotos de nuestro personal -->
-            <img src="imagen_del_miembro1.jpg" alt="Nombre del miembro 1">
-            <h2>Nombre del miembro 1</h2>
-            <p>Descripcion breve del miembro 1</p>
-            <ul>
-                <li>Formacion minima de 5 anos en el sector de la belleza</li>
-                <li>X anos de experiencia en el mundo de la peluqueria</li>
-                <li>Certificaciones de alta calidad</li>
-            </ul>
-        </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="peluqueria.html">
+                            <ion-icon name="cut-outline"></ion-icon>
+                            <span>Peluquería</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reservas.html">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                            <span>Reservas</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="equipo.html">
+                            <ion-icon name="people-outline"></ion-icon>
+                            <span>Equipo</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
 
-        <div>
-            <img src="imagen_del_miembro2.jpg" alt="Nombre del miembro 2">
-            <h2>Nombre del miembro 2</h2>
-            <p>Descripcion breve del miembro 2</p>
-            <ul>
-                <li>Formacion minima de 5 anos en el sector de la belleza</li>
-                <li>X anos de experiencia en el mundo de la peluqueria</li>
-                <li>Certificaciones de alta calidad</li>
-            </ul>
-        </div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1 class="visually-hidden">Corte &amp; Arte</h1>
+                <button class="reserve-button" onclick="window.location.href='reservas.html'">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <span>Reservar</span>
+                </button>
+            </header>
 
-        <div>
-            <img src="imagen_del_miembro3.jpg" alt="Nombre del miembro 3">
-            <h2>Nombre del miembro 3</h2>
-            <p>Descripcion breve del miembro 3</p>
-            <ul>
-                <li>Formacion minima de 5 anos en el sector de la belleza</li>
-                <li>X anos de experiencia en el mundo de la peluqueria</li>
-                <li>Certificaciones de alta calidad</li>
-            </ul>
-        </div>
-    </section>
-    <section>
-        <!-- Add your content here -->
-        <h2>Bienvenido a nuestra peluquería!</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+            <!-- Sobre nosotros Section -->
+            <section class="about-section">
+                <div class="section-header">
+                    <h2>Sobre nosotros</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <ion-icon name="medal-outline"></ion-icon>
+                            <h3>Experiencia</h3>
+                            <p>Profesionales con más de 5 años en el sector de la belleza.</p>
+                        </div>
+                        <div class="about-card">
+                            <ion-icon name="school-outline"></ion-icon>
+                            <h3>Formación</h3>
+                            <p>Certificaciones de alta calidad y formación continua.</p>
+                        </div>
+                        <div class="about-card">
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <h3>Dedicación</h3>
+                            <p>Servicio personalizado y atención cuidadosa a cada cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <button class="button">Click me</button>
+            <!-- Team Members Section -->
+            <section class="team-section">
+                <div class="section-header">
+                    <h2>Nuestros Profesionales</h2>
+                </div>
+                <div class="team-grid">
+                    <article class="team-member">
+                        <div class="member-image">
+                            <img src="imagen_del_miembro1.jpg" alt="Nombre del miembro 1">
+                        </div>
+                        <div class="member-info">
+                            <h3>Nombre del miembro 1</h3>
+                            <p class="member-role">Estilista Senior</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Cortes</span>
+                                <span class="skill-tag">Peinados</span>
+                                <span class="skill-tag">Color</span>
+                            </div>
+                        </div>
+                    </article>
 
-        <form>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name">
+                    <article class="team-member">
+                        <div class="member-image">
+                            <img src="imagen_del_miembro2.jpg" alt="Nombre del miembro 2">
+                        </div>
+                        <div class="member-info">
+                            <h3>Nombre del miembro 2</h3>
+                            <p class="member-role">Colorista</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Tintes</span>
+                                <span class="skill-tag">Mechas</span>
+                                <span class="skill-tag">Balayage</span>
+                            </div>
+                        </div>
+                    </article>
 
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email">
+                    <article class="team-member">
+                        <div class="member-image">
+                            <img src="imagen_del_miembro3.jpg" alt="Nombre del miembro 3">
+                        </div>
+                        <div class="member-info">
+                            <h3>Nombre del miembro 3</h3>
+                            <p class="member-role">Especialista en Tratamientos</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Hidratación</span>
+                                <span class="skill-tag">Keratina</span>
+                                <span class="skill-tag">Masajes</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message"></textarea>
+            <!-- Social Media Section -->
+            <section class="social-section">
+                <div class="section-header">
+                    <h2>Síguenos</h2>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/corteandarte" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/corteandarte" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://twitter.com/corteandarte" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </div>
+            </section>
 
-            <input type="submit" value="Enviar">
-        </form>
-
-        <img src="image.jpg" alt="Image Description">
-
-        <img class="thumbnail" src="thumbnail.jpg" alt="Thumbnail Description">
-    </section>
-    <section>
-        <h2>Redes sociales</h2>
-        <ul>
-            <li><a href="https://www.facebook.com/corteandarte">Facebook</a></li>
-            <li><a href="https://www.instagram.com/corteandarte">Instagram</a></li>
-            <li><a href="https://twitter.com/corteandarte">Twitter</a></li>
-        </ul>
-    </section>
-    <footer>
-        <p>© 2025 Corte &amp; Arte - <a href="mailto:contacto@corteandarte.com">contacto@corteandarte.com</a></p>
-    </footer>
+            <!-- Footer -->
+            <footer class="main-footer">
+                <p>© 2025 Corte &amp; Arte - <a href="mailto:contacto@corteandarte.com">contacto@corteandarte.com</a></p>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
+
