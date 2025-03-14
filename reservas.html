@@ -1,10 +1,10 @@
-<!DOCTYPE HTML>
 <html lang="es">
 <head>
     <title>Corte &amp; Arte - Reservas</title>
     <meta name="description" content="Sistema de reservas para nuestros servicios de peluquería">
     <meta name="keywords" content="peluquería, reservas, citas, servicios, belleza">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -12,110 +12,79 @@
 </head>
 <body class="reservas-page">
     <div class="container">
-        <!-- Sidebar -->
+        <!-- Barra lateral -->
         <aside class="sidebar">
             <div class="logo-container">
                 <ion-icon name="cut-outline"></ion-icon>
-                <span>Corte &amp; Arte</span>
+                <span>Corte & Arte</span>
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li>
-                        <a href="index.html">
-                            <ion-icon name="home-outline"></ion-icon>
-                            <span>Inicio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="peluqueria.html">
-                            <ion-icon name="cut-outline"></ion-icon>
-                            <span>Peluquería</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="reservas.html">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                            <span>Reservas</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="equipo.html">
-                            <ion-icon name="people-outline"></ion-icon>
-                            <span>Equipo</span>
-                        </a>
-                    </li>
+                    <li><a href="index.html"><ion-icon name="home-outline"></ion-icon> Inicio</a></li>
+                    <li><a href="peluqueria.html"><ion-icon name="cut-outline"></ion-icon> Peluquería</a></li>
+                    <li class="active"><a href="reservas.html"><ion-icon name="calendar-outline"></ion-icon> Reservas</a></li>
+                    <li><a href="equipo.html"><ion-icon name="people-outline"></ion-icon> Equipo</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <!-- Main Content -->
+        <!-- Contenido principal -->
         <main class="main-content">
             <header class="main-header">
-                <h1 class="visually-hidden">Corte &amp; Arte</h1>
-                <button class="reserve-button" onclick="window.location.href='reservas.html'">
+                <h1>Reserva tu cita</h1>
+                <button class="reserve-button">
                     <ion-icon name="calendar-outline"></ion-icon>
-                    <span>Reservar</span>
+                    Reservar ahora
                 </button>
             </header>
 
-            <!-- Reservas Section -->
             <section class="reservas-section">
                 <div class="section-header">
                     <h2>Reserva tu cita</h2>
-                    <p>Selecciona el servicio, fecha y hora que prefieras</p>
+                    <p>Elige el servicio, fecha y hora que mejor se adapte a tus necesidades</p>
                 </div>
 
                 <div class="reservation-container">
+                    <!-- Formulario de reserva -->
                     <div class="reservation-form-container">
-                        <form class="reservation-form">
+                        <form class="reservation-form" id="reservation-form">
                             <div class="form-group">
-                                <label for="nombre">Nombre completo</label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" name="name" required placeholder="Tu nombre y apellidos">
                             </div>
-
+                            
                             <div class="form-group">
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
                             </div>
-
+                            
                             <div class="form-group">
-                                <label for="telefono">Teléfono</label>
-                                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Tu número de teléfono">
                             </div>
-
+                            
                             <div class="form-group">
-                                <label for="servicio">Servicio</label>
-                                <select id="servicio" name="servicio" required>
-                                    <option value="" disabled selected>Selecciona un servicio</option>
-                                    <option value="corte">Corte de cabello</option>
+                                <label for="service">Servicio</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="corte">Corte de pelo</option>
+                                    <option value="color">Coloración</option>
                                     <option value="peinado">Peinado</option>
-                                    <option value="tinte">Tinte y color</option>
+                                    <option value="tratamiento">Tratamiento capilar</option>
                                     <option value="manicura">Manicura</option>
                                     <option value="pedicura">Pedicura</option>
-                                    <option value="depilacion">Depilación</option>
-                                    <option value="maquillaje">Maquillaje</option>
-                                    <option value="tratamiento">Tratamiento capilar</option>
                                 </select>
                             </div>
-
+                            
                             <div class="form-group">
-                                <label for="sala">Sala</label>
-                                <select id="sala" name="sala" required>
-                                    <option value="" disabled selected>Selecciona una sala</option>
-                                    <option value="norte">Sala Norte</option>
-                                    <option value="sur">Sala Sur</option>
-                                </select>
+                                <label for="date">Fecha</label>
+                                <input type="date" id="date" name="date" required>
                             </div>
-
+                            
                             <div class="form-group">
-                                <label for="fecha">Fecha</label>
-                                <input type="date" id="fecha" name="fecha" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="hora">Hora</label>
-                                <select id="hora" name="hora" required>
-                                    <option value="" disabled selected>Selecciona una hora</option>
+                                <label for="time">Hora</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Selecciona una hora</option>
                                     <option value="09:00">09:00</option>
                                     <option value="10:00">10:00</option>
                                     <option value="11:00">11:00</option>
@@ -127,73 +96,70 @@
                                     <option value="19:00">19:00</option>
                                 </select>
                             </div>
-
-                            <div class="form-group">
-                                <label for="comentarios">Comentarios adicionales</label>
-                                <textarea id="comentarios" name="comentarios" placeholder="¿Alguna petición especial?"></textarea>
+                            
+                            <div class="form-group full-width">
+                                <label for="notes">Notas adicionales</label>
+                                <textarea id="notes" name="notes" placeholder="Cuéntanos cualquier detalle importante sobre tu reserva"></textarea>
                             </div>
-
+                            
                             <div class="form-actions">
                                 <button type="submit" class="submit-button">
                                     <ion-icon name="calendar-outline"></ion-icon>
-                                    <span>Confirmar Reserva</span>
+                                    Confirmar reserva
                                 </button>
                             </div>
                         </form>
                     </div>
-
+                    
+                    <!-- Información adicional -->
                     <div class="reservation-info">
                         <div class="info-card">
                             <div class="info-header">
                                 <ion-icon name="information-circle-outline"></ion-icon>
-                                <h3>Información de Reservas</h3>
+                                <h3>Información importante</h3>
                             </div>
                             <div class="info-content">
                                 <ul>
-                                    <li>Las reservas deben realizarse con al menos 24 horas de antelación.</li>
-                                    <li>Puedes cancelar o modificar tu reserva hasta 12 horas antes de la cita.</li>
-                                    <li>Te recomendamos llegar 10 minutos antes de tu cita.</li>
-                                    <li>En caso de no poder asistir, por favor avísanos para liberar el horario.</li>
+                                    <li>Por favor, llega 5-10 minutos antes de tu cita</li>
+                                    <li>Si necesitas cancelar, hazlo con al menos 24 horas de antelación</li>
+                                    <li>Confirmaremos tu reserva por correo electrónico</li>
+                                    <li>Puedes pagar en efectivo o con tarjeta</li>
                                 </ul>
                             </div>
                         </div>
-
+                        
                         <div class="info-card">
                             <div class="info-header">
                                 <ion-icon name="call-outline"></ion-icon>
-                                <h3>Contacto Directo</h3>
+                                <h3>¿Necesitas ayuda?</h3>
                             </div>
                             <div class="info-content">
-                                <p>Si prefieres hacer tu reserva por teléfono:</p>
-                                <p class="contact-phone">+34 912 345 678</p>
-                                <p>Horario de atención telefónica:</p>
-                                <p>Lunes a Viernes: 9:00 - 20:00</p>
-                                <p>Sábados: 9:00 - 14:00</p>
+                                <p>Si tienes alguna duda o necesitas asistencia con tu reserva, no dudes en contactarnos:</p>
+                                <div class="contact-phone">+34 912 345 678</div>
+                                <p>Horario de atención: Lunes a Viernes de 9:00 a 20:00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-header">
+                                <ion-icon name="location-outline"></ion-icon>
+                                <h3>Nuestra ubicación</h3>
+                            </div>
+                            <div class="info-content">
+                                <p>Calle Principal, 123<br>
+                                28001 Madrid<br>
+                                España</p>
+                                <p>Estamos cerca de la estación de metro "Centro"</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <!-- Footer -->
+            
             <footer class="main-footer">
-                <div class="footer-content">
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/corteandarte" class="social-icon">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                        <a href="https://www.instagram.com/corteandarte" class="social-icon">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                        <a href="https://twitter.com/corteandarte" class="social-icon">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </div>
-                    <p>© 2025 Corte &amp; Arte - <a href="mailto:contacto@corteandarte.com">contacto@corteandarte.com</a></p>
-                </div>
+                <p>&copy; 2023 Corte & Arte - Todos los derechos reservados</p>
             </footer>
         </main>
     </div>
 </body>
 </html>
-
