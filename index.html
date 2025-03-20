@@ -16,7 +16,7 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo-container">
-                <ion-icon name="cut-outline"></ion-icon>
+                <img src="img/logo.png" alt="C&amp;A" style="width: 40px; height: auto;">
                 <span>Corte &amp; Arte</span>
             </div>
             <nav class="sidebar-nav">
@@ -53,10 +53,16 @@
         <main class="main-content">
             <header class="main-header">
                 <h1 class="visually-hidden">Corte &amp; Arte</h1>
-                <button class="reserve-button" onclick="window.location.href='reservas.html'">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                    <span>Reservar</span>
-                </button>
+                <div class="header-buttons">
+                    <button id="theme-toggle" class="theme-toggle-button" aria-label="Cambiar modo oscuro">
+                        <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+                        <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+                    </button>
+                    <button class="reserve-button" onclick="window.location.href='reservas.html'">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                        <span>Reservar</span>
+                    </button>
+                </div>
             </header>
 
             <!-- Gallery Section -->
@@ -67,20 +73,32 @@
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="img/zona-norte.jpg" alt="Zona Norte">
+                        <img src="img/sala2.jpg" alt="Zona Norte">
                         <div class="gallery-caption">Zona Norte</div>
+                        <div class="gallery-item-overlay">
+                            <a href="peluqueria.html#sala-norte" class="gallery-button">Ver Sala</a>
+                        </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/zona-kids.jpg" alt="Zona Kids">
-                        <div class="gallery-caption">Zona Kids</div>
+                        <img src="img/sala1.jpg" alt="Zona Sur">
+                        <div class="gallery-caption">Zona Sur</div>
+                        <div class="gallery-item-overlay">
+                            <a href="peluqueria.html#sala-sur" class="gallery-button">Ver Sala</a>
+                        </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/zona-unisex.jpg" alt="Zona Unisex">
+                        <img src="img/sala-unisex.jpg" alt="Zona Unisex">
                         <div class="gallery-caption">Zona Unisex</div>
+                        <div class="gallery-item-overlay">
+                            <a href="peluqueria.html#sala-unisex" class="gallery-button">Ver Sala</a>
+                        </div>
                     </div>
                     <div class="gallery-item">
-                        <img src="img/zona-spa.jpg" alt="Zona Spa">
-                        <div class="gallery-caption">Zona Spa</div>
+                        <img src="img/sala-vip.jpeg" alt="Zona Spa">
+                        <div class="gallery-caption">Zona VIP</div>
+                        <div class="gallery-item-overlay">
+                            <a href="peluqueria.html#sala-vip" class="gallery-button">Ver Sala</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -93,7 +111,7 @@
                 </div>
                 <div class="services-grid">
                     <div class="service-item">
-                        <img src="img/corte-pelo.jpg" alt="Corte de pelo">
+                        <img src="img/cortepelo.jpg" alt="Corte de pelo">
                         <div class="service-caption">Corte de pelo</div>
                     </div>
                     <div class="service-item">
@@ -155,18 +173,44 @@
 
             <!-- Footer -->
             <footer class="main-footer">
-                <div class="social-links">
-                    <a href="https://www.facebook.com/corteandarte">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                    <a href="https://www.instagram.com/corteandarte">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                    <a href="https://twitter.com/corteandarte">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <ion-icon name="cut-outline"></ion-icon>
+                            <span>Corte &amp; Arte</span>
+                        </div>
+                        <p>Tu salón de belleza de confianza desde 2010</p>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Contacto</h4>
+                        <p><ion-icon name="location-outline"></ion-icon> Calle Principal 123, Ciudad</p>
+                        <p><ion-icon name="call-outline"></ion-icon> +34 123 456 789</p>
+                        <p><ion-icon name="mail-outline"></ion-icon> contacto@corteandarte.com</p>
+                    </div>
+                    
+                    <div class="footer-hours">
+                        <h4>Horario</h4>
+                        <p>Lunes a Viernes: 9:00 - 20:00</p>
+                        <p>Sábados: 10:00 - 18:00</p>
+                        <p>Domingos: Cerrado</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://twitter.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </div>
                 </div>
-                <p>© 2025 Corte &amp; Arte</p>
+                <div class="footer-bottom">
+                    <p>© 2025 Corte &amp; Arte - Todos los derechos reservados</p>
+                </div>
             </footer>
         </main>
     </div>

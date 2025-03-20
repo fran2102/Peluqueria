@@ -5,6 +5,7 @@
     <meta name="description" content="Conoce a nuestro equipo de profesionales de peluquería">
     <meta name="keywords" content="peluquería, equipo, profesionales, estilistas, belleza">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -15,7 +16,7 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo-container">
-                <ion-icon name="cut-outline"></ion-icon>
+                <img src="img/logo.png" alt="C&amp;A" style="width: 40px; height: auto;">
                 <span>Corte &amp; Arte</span>
             </div>
             <nav class="sidebar-nav">
@@ -52,115 +53,322 @@
         <main class="main-content">
             <header class="main-header">
                 <h1 class="visually-hidden">Corte &amp; Arte</h1>
-                <button class="reserve-button" onclick="window.location.href='reservas.html'">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                    <span>Reservar</span>
-                </button>
+                <div class="header-buttons">
+                    <button id="theme-toggle" class="theme-toggle-button" aria-label="Cambiar modo oscuro">
+                        <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+                        <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+                    </button>
+                    <button class="reserve-button" onclick="window.location.href='reservas.html'">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                        <span>Reservar</span>
+                    </button>
+                </div>
             </header>
-
             <!-- Sobre nosotros Section -->
             <section class="about-section">
                 <div class="section-header">
-                    <h2>Sobre nosotros</h2>
+                    <h2>Nuestra Filosofía</h2>
+                    <p>Conoce los valores que nos definen</p>
                 </div>
+            
                 <div class="about-content">
-                    <div class="about-cards">
+                    <div class="about-cards minimal">
                         <div class="about-card">
-                            <ion-icon name="medal-outline"></ion-icon>
-                            <h3>Experiencia</h3>
-                            <p>Profesionales con más de 5 años en el sector de la belleza.</p>
+                            <div class="card-icon">
+                                <ion-icon name="medal-outline"></ion-icon>
+                            </div>
+                            <div class="card-content">
+                                <h3>Experiencia</h3>
+                                <p>Profesionales con más de 5 años en el sector de la belleza, formados en las mejores escuelas.</p>
+                            </div>
                         </div>
                         <div class="about-card">
-                            <ion-icon name="school-outline"></ion-icon>
-                            <h3>Formación</h3>
-                            <p>Certificaciones de alta calidad y formación continua.</p>
+                            <div class="card-icon">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </div>
+                            <div class="card-content">
+                                <h3>Formación</h3>
+                                <p>Certificaciones de alta calidad y formación continua para estar siempre a la vanguardia.</p>
+                            </div>
                         </div>
                         <div class="about-card">
-                            <ion-icon name="heart-outline"></ion-icon>
-                            <h3>Dedicación</h3>
-                            <p>Servicio personalizado y atención cuidadosa a cada cliente.</p>
+                            <div class="card-icon">
+                                <ion-icon name="heart-outline"></ion-icon>
+                            </div>
+                            <div class="card-content">
+                                <h3>Dedicación</h3>
+                                <p>Servicio personalizado y atención cuidadosa a cada cliente para garantizar su satisfacción.</p>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <ion-icon name="trending-up-outline"></ion-icon>
+                            </div>
+                            <div class="card-content">
+                                <h3>Innovación</h3>
+                                <p>Siempre al día con las últimas técnicas y productos para ofrecerte lo mejor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+
+            <!-- Team Members Section -->
+            <section class="team-section minimal">
+                <div class="section-header">
+                    <h2>Conoce a Nuestros Estilistas</h2>
+                    <p>El talento detrás de cada creación</p>
+                </div>
+                
+                <div class="team-grid">
+                    <article class="team-member">
+                        <div class="member-image">
+                            <img src="img/estilista1.jpg" alt="Laura Martínez">
+                            <div class="member-social">
+                                <a href="#" class="member-social-link"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#" class="member-social-link"><ion-icon name="logo-pinterest"></ion-icon></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Laura Martínez</h3>
+                            <p class="member-role">Directora Creativa</p>
+                            <p class="member-bio">Con más de 10 años de experiencia, Laura ha trabajado en las mejores peluquerías de Europa y ha participado en eventos de moda internacionales.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Cortes</span>
+                                <span class="skill-tag">Peinados</span>
+                                <span class="skill-tag">Color</span>
+                                <span class="skill-tag">Asesoría</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-member">
+                        <div class="member-image">
+                            <img src="img/estilista2.jpg" alt="Carlos Rodríguez">
+                            <div class="member-social">
+                                <a href="#" class="member-social-link"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#" class="member-social-link"><ion-icon name="logo-pinterest"></ion-icon></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Carlos Rodríguez</h3>
+                            <p class="member-role">Colorista Senior</p>
+                            <p class="member-bio">Especialista en técnicas de coloración avanzadas, Carlos es reconocido por su habilidad para crear tonos personalizados que realzan la belleza natural.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Tintes</span>
+                                <span class="skill-tag">Mechas</span>
+                                <span class="skill-tag">Balayage</span>
+                                <span class="skill-tag">Ombré</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-member">
+                        <div class="member-image">
+                            <img src="img/estilista3.jpg" alt="Elena Gómez">
+                            <div class="member-social">
+                                <a href="#" class="member-social-link"><ion-icon name="logo-instagram"></ion-icon></a>
+                                <a href="#" class="member-social-link"><ion-icon name="logo-pinterest"></ion-icon></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Elena Gómez</h3>
+                            <p class="member-role">Especialista en Tratamientos</p>
+                            <p class="member-bio">Con formación en tricología y cosmética capilar, Elena se especializa en diagnósticos y tratamientos para todo tipo de cabello y cuero cabelludo.</p>
+                            <div class="member-skills">
+                                <span class="skill-tag">Hidratación</span>
+                                <span class="skill-tag">Keratina</span>
+                                <span class="skill-tag">Masajes</span>
+                                <span class="skill-tag">Nutrición</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="testimonials-section">
+                <div class="section-header">
+                    <h2>Reseñas </h2>
+                    <p>La opinión de nuestros clientes</p>
+                </div>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                            <p>"Laura es una artista con las tijeras. Siempre salgo encantada con mi nuevo look y la atención es inmejorable."</p>
+                            <div class="testimonial-author">
+                                <img src="img/cliente1.jpg" alt="Ana Pérez">
+                                <span>Ana Pérez</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half"></ion-icon>
+                            </div>
+                            <p>"Carlos hizo un trabajo increíble con mi color. Entendió exactamente lo que quería y el resultado superó mis expectativas."</p>
+                            <div class="testimonial-author">
+                                <img src="img/cliente2.jpg" alt="Marta López">
+                                <span>Marta López</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Team Members Section -->
-            <section class="team-section">
-                <div class="section-header">
-                    <h2>Nuestros Profesionales</h2>
-                </div>
-                <div class="team-grid">
-                    <article class="team-member">
-                        <div class="member-image">
-                            <img src="imagen_del_miembro1.jpg" alt="Nombre del miembro 1">
-                        </div>
-                        <div class="member-info">
-                            <h3>Nombre del miembro 1</h3>
-                            <p class="member-role">Estilista Senior</p>
-                            <div class="member-skills">
-                                <span class="skill-tag">Cortes</span>
-                                <span class="skill-tag">Peinados</span>
-                                <span class="skill-tag">Color</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="team-member">
-                        <div class="member-image">
-                            <img src="imagen_del_miembro2.jpg" alt="Nombre del miembro 2">
-                        </div>
-                        <div class="member-info">
-                            <h3>Nombre del miembro 2</h3>
-                            <p class="member-role">Colorista</p>
-                            <div class="member-skills">
-                                <span class="skill-tag">Tintes</span>
-                                <span class="skill-tag">Mechas</span>
-                                <span class="skill-tag">Balayage</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="team-member">
-                        <div class="member-image">
-                            <img src="imagen_del_miembro3.jpg" alt="Nombre del miembro 3">
-                        </div>
-                        <div class="member-info">
-                            <h3>Nombre del miembro 3</h3>
-                            <p class="member-role">Especialista en Tratamientos</p>
-                            <div class="member-skills">
-                                <span class="skill-tag">Hidratación</span>
-                                <span class="skill-tag">Keratina</span>
-                                <span class="skill-tag">Masajes</span>
-                            </div>
-                        </div>
-                    </article>
+            <!-- Join Us Section -->
+            <section class="join-section">
+                <div class="join-content">
+                    <h2>¿Eres profesional de la peluquería?</h2>
+                    <p>Estamos siempre buscando talento para unirse a nuestro equipo</p>
+                    <a href="#" class="join-button">Únete a nosotros</a>
                 </div>
             </section>
 
-            <!-- Social Media Section -->
-            <section class="social-section">
+            <!-- Awards Section -->
+            <section class="awards-section">
                 <div class="section-header">
-                    <h2>Síguenos</h2>
+                    <h2>Reconocimientos</h2>
+                    <p>Premios y certificaciones que avalan nuestra calidad</p>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/corteandarte" class="social-link">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                    <a href="https://www.instagram.com/corteandarte" class="social-link">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                    <a href="https://twitter.com/corteandarte" class="social-link">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
+                
+                <div class="awards-container">
+                    <div class="awards-grid">
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <ion-icon name="trophy"></ion-icon>
+                            </div>
+                            <div class="award-badge">2023</div>
+                            <div class="award-info">
+                                <h3>Mejor Peluquería del Año</h3>
+                                <p>Asociación Nacional de Estilistas</p>
+                                <div class="award-description">
+                                    <p>Reconocimiento a la excelencia en servicio, innovación y satisfacción del cliente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <ion-icon name="color-palette"></ion-icon>
+                            </div>
+                            <div class="award-badge">2022</div>
+                            <div class="award-info">
+                                <h3>Innovación en Coloración</h3>
+                                <p>Festival Internacional de Belleza</p>
+                                <div class="award-description">
+                                    <p>Premio por nuestras técnicas revolucionarias de coloración y tratamientos personalizados.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <ion-icon name="ribbon"></ion-icon>
+                            </div>
+                            <div class="award-badge">2021</div>
+                            <div class="award-info">
+                                <h3>Certificación de Excelencia</h3>
+                                <p>Consejo Superior de Imagen Personal</p>
+                                <div class="award-description">
+                                    <p>Certificación que reconoce nuestros altos estándares de calidad y profesionalidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                            <div class="award-badge">2020</div>
+                            <div class="award-info">
+                                <h3>Mejor Experiencia Cliente</h3>
+                                <p>Premios Nacionales de Belleza</p>
+                                <div class="award-description">
+                                    <p>Reconocimiento por nuestra excepcional atención al cliente y ambiente acogedor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="awards-partners">
+                        <h4>Colaboramos con las mejores marcas</h4>
+                        <div class="partners-logos">
+                            <div class="partner-logo"><img src="img/partner1.jfif" alt="Partner 1"></div>
+                            <div class="partner-logo"><img src="img/partner2.jpg" alt="Partner 2"></div>
+                            <div class="partner-logo"><img src="img/partner3.jpeg" alt="Partner 3"></div>
+                            <div class="partner-logo"><img src="img/partner4.jpeg" alt="Partner 4"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2>¿Listo para renovar tu imagen?</h2>
+                    <p>Nuestro equipo de profesionales está esperando para atenderte</p>
+                    <a href="reservas.html" class="cta-button">Reservar Cita</a>
                 </div>
             </section>
 
             <!-- Footer -->
             <footer class="main-footer">
-                <p>© 2025 Corte &amp; Arte - <a href="mailto:contacto@corteandarte.com">contacto@corteandarte.com</a></p>
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <ion-icon name="cut-outline"></ion-icon>
+                            <span>Corte &amp; Arte</span>
+                        </div>
+                        <p>Tu salón de belleza de confianza desde 2010</p>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>Contacto</h4>
+                        <p><ion-icon name="location-outline"></ion-icon> Calle Principal 123, Ciudad</p>
+                        <p><ion-icon name="call-outline"></ion-icon> +34 123 456 789</p>
+                        <p><ion-icon name="mail-outline"></ion-icon> contacto@corteandarte.com</p>
+                    </div>
+                    
+                    <div class="footer-hours">
+                        <h4>Horario</h4>
+                        <p>Lunes a Viernes: 9:00 - 20:00</p>
+                        <p>Sábados: 10:00 - 18:00</p>
+                        <p>Domingos: Cerrado</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://twitter.com/corteandarte" class="social-icon">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Corte &amp; Arte - Todos los derechos reservados</p>
+                </div>
             </footer>
         </main>
     </div>
 </body>
 </html>
-

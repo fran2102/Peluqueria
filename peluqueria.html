@@ -11,137 +11,304 @@
     <script src="scripts.js"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="logo-container">
-                <ion-icon name="cut-outline"></ion-icon>
-                <span>Corte &amp; Arte</span>
-            </div>
-            <nav class="sidebar-nav">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <ion-icon name="home-outline"></ion-icon>
-                            <span>Inicio</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="peluqueria.html">
-                            <ion-icon name="cut-outline"></ion-icon>
-                            <span>Peluquería</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="reservas.html">
+        <div class="container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="logo-container">
+                    <img src="img/logo.png" alt="C&amp;A" style="width: 40px; height: auto;">
+                    <span>Corte &amp; Arte</span>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <ion-icon name="home-outline"></ion-icon>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="peluqueria.html">
+                                <ion-icon name="cut-outline"></ion-icon>
+                                <span>Peluquería</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="reservas.html">
+                                <ion-icon name="calendar-outline"></ion-icon>
+                                <span>Reservas</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="equipo.html">
+                                <ion-icon name="people-outline"></ion-icon>
+                                <span>Equipo</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <header class="main-header">
+                    <h1 class="visually-hidden">Corte &amp; Arte</h1>
+                    <div class="header-buttons">
+                        <button id="theme-toggle" class="theme-toggle-button" aria-label="Cambiar modo oscuro">
+                            <ion-icon name="moon-outline" class="moon-icon"></ion-icon>
+                            <ion-icon name="sunny-outline" class="sun-icon"></ion-icon>
+                        </button>
+                        <button class="reserve-button" onclick="window.location.href='reservas.html'">
                             <ion-icon name="calendar-outline"></ion-icon>
-                            <span>Reservas</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="equipo.html">
-                            <ion-icon name="people-outline"></ion-icon>
-                            <span>Equipo</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="main-header">
-                <h1 class="visually-hidden">Corte &amp; Arte</h1>
-                <button class="reserve-button" onclick="window.location.href='reservas.html'">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                    <span>Reservar</span>
-                </button>
-            </header>
-
-            <!-- Salas Section -->
-            <section class="salas-section">
-                <div class="section-header">
-                    <h2>Salas Especializadas</h2>
-                    <p>Conoce nuestras instalaciones y servicios</p>
-                </div>
-
-                <!-- Sala Norte -->
-                <article class="sala-item">
-                    <div class="sala-header">
-                        <h3>Sala Norte</h3>
+                            <span>Reservar</span>
+                        </button>
                     </div>
-                    <div class="sala-content">
-                        <div class="sala-image">
-                            <img src="img/sala1.jpg" alt="Foto de la Sala Norte">
-                        </div>
-                        <div class="sala-description">
-                            <p>La Sala Norte es una sala de belleza y peluquería moderna y confortable, ubicada en el área norte de nuestra ubicación. Nuestra Sala Norte ofrece un amplio rango de servicios de belleza y peluquería.</p>
+                </header>
 
-                            <div class="services-table">
-                                <h4>Servicios e Instalaciones</h4>
-                                <ul class="services-list">
-                                    <li>Corte de cabello</li>
-                                    <li>Peinado</li>
-                                    <li>Manicura</li>
-                                    <li>Pedicura</li>
-                                    <li>Tinte y color</li>
-                                    <li>Depilación</li>
-                                    <li>Maquillaje</li>
-                                    <li>Tratamiento capilar</li>
-                                </ul>
+                <!-- Salas Section -->
+                <section id="salas" class="salas-section">
+                    <div class="section-header">
+                        <h2>Salas Especializadas</h2>
+                        <p>Conoce nuestras instalaciones y servicios</p>
+                    </div>
+
+                    <!-- Sala Norte -->
+                    <article id="sala-norte" class="sala-item">
+                        <div class="sala-header">
+                            <h3>Sala Norte</h3>
+                            <span class="sala-tag">Premium</span>
+                        </div>
+                        <div class="sala-content">
+                            <div class="sala-image">
+                                <img src="img/sala2.jpg" alt="Foto de la Sala Norte">
+                                <div class="sala-image-overlay">
+                                    <span>Ver galería</span>
+                                </div>
+                            </div>
+                            <div class="sala-description">
+                                <p>La Sala Norte es una sala de belleza y peluquería moderna y confortable, ubicada en el área norte de nuestra ubicación. Diseñada con un estilo contemporáneo y equipada con la última tecnología en tratamientos capilares.</p>
+
+                                <div class="services-table">
+                                    <h4>Servicios e Instalaciones</h4>
+                                    <ul class="services-list">
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Corte de cabello</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Peinado</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Manicura</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Pedicura</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Tinte y color</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Depilación</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Maquillaje</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Tratamiento capilar</li>
+                                    </ul>
+                                </div>
+                                <div class="sala-cta">
+                                    <a href="reservas.html?sala=norte" class="sala-button sala-button-premium">Reservar esta sala</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sala Sur -->
+                    <article id="sala-sur" class="sala-item">
+                        <div class="sala-header">
+                            <h3>Sala Sur</h3>
+                        </div>
+                        <div class="sala-content">
+                            <div class="sala-image">
+                                <img src="img/sala1.jpg" alt="Foto de la Sala Sur">
+                                <div class="sala-image-overlay">
+                                    <span>Ver galería</span>
+                                </div>
+                            </div>
+                            <div class="sala-description">
+                                <p>La Sala Sur es un espacio de lujo y confort, diseñada para ofrecer una experiencia premium. Con un ambiente relajante y exclusivo, nuestros estilistas expertos te brindarán un servicio personalizado de alta calidad.</p>
+
+                                <div class="services-table">
+                                    <h4>Servicios e Instalaciones</h4>
+                                    <ul class="services-list">
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Corte de cabello</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Peinado</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Manicura</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Pedicura</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Tinte y color</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Depilación</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Maquillaje</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Tratamiento capilar</li>
+                                    </ul>
+                                </div>
+                                <div class="sala-cta">
+                                    <a href="reservas.html?sala=sur" class="sala-button sala-button-premium">Reservar esta sala</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sala Unisex -->
+                    <article id="sala-unisex" class="sala-item">
+                        <div class="sala-header">
+                            <h3>Sala Unisex</h3>
+                            <span class="sala-tag">Inclusiva</span>
+                        </div>
+                        <div class="sala-content">
+                            <div class="sala-image">
+                                <img src="img/sala-unisex.jpg" alt="Foto de la Sala Unisex">
+                                <div class="sala-image-overlay">
+                                    <span>Ver galería</span>
+                                </div>
+                            </div>
+                            <div class="sala-description">
+                                <p>Nuestra Sala Unisex es un espacio moderno y versátil diseñado para todos los géneros. Con un ambiente acogedor y contemporáneo, ofrecemos servicios personalizados que se adaptan a todos los estilos y preferencias, respetando la diversidad y la expresión individual.</p>
+
+                                <div class="services-table">
+                                    <h4>Servicios Especializados</h4>
+                                    <ul class="services-list">
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Cortes de cabello para todos los géneros</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Coloración y mechas personalizadas</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Barbería y afeitado profesional</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Peinados para eventos especiales</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Tratamientos capilares específicos</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Asesoramiento de imagen</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Técnicas de corte innovadoras</li>
+                                        <li><ion-icon name="checkmark-circle"></ion-icon> Ambiente inclusivo y respetuoso</li>
+                                    </ul>
+                                </div>
+                                <div class="sala-cta">
+                                    <a href="reservas.html?sala=unisex" class="sala-button">Reservar esta sala</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sala VIP -->
+                    <article id="sala-vip" class="sala-item sala-premium">
+                        <div class="sala-header">
+                            <h3>Sala VIP</h3>
+                            <span class="sala-tag sala-tag-premium">Luxury</span>
+                        </div>
+                        <div class="sala-content">
+                            <div class="sala-image">
+                                <img src="img/sala-vip.jpeg" alt="Foto de la Sala VIP">
+                                <div class="sala-image-overlay">
+                                    <span>Ver galería</span>
+                                </div>
+                            </div>
+                            <div class="sala-description">
+                                <p>Nuestra Sala VIP ofrece una experiencia exclusiva y personalizada. Con atención individual, privacidad absoluta y los tratamientos más avanzados del mercado. Incluye champagne de cortesía y servicio de masaje capilar.</p>
+
+                                <div class="services-table">
+                                    <h4>Servicios Premium</h4>
+                                    <ul class="services-list">
+                                        <li><ion-icon name="star"></ion-icon> Corte y peinado exclusivo</li>
+                                        <li><ion-icon name="star"></ion-icon> Coloración avanzada</li>
+                                        <li><ion-icon name="star"></ion-icon> Tratamientos de lujo</li>
+                                        <li><ion-icon name="star"></ion-icon> Manicura y pedicura premium</li>
+                                        <li><ion-icon name="star"></ion-icon> Masaje capilar</li>
+                                        <li><ion-icon name="star"></ion-icon> Champagne de cortesía</li>
+                                        <li><ion-icon name="star"></ion-icon> Atención personalizada</li>
+                                    </ul>
+                                </div>
+                                <div class="sala-cta">
+                                    <a href="reservas.html?sala=vip" class="sala-button sala-button-premium">Reservar experiencia VIP</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Testimonials Section -->
+                <section class="testimonials-section">
+                    <div class="section-header">
+                        <h2>Lo que dicen nuestros clientes</h2>
+                        <p>Experiencias reales de quienes confían en nosotros</p>
+                    </div>
+                    
+                    <div class="testimonials-slider">
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                                <p>"Una experiencia increíble. El personal es muy profesional y las instalaciones son de primera calidad. Volveré sin duda."</p>
+                                <div class="testimonial-author">
+                                    <img src="img/client1.jpg" alt="Cliente 1">
+                                    <span>María García</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-rating">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star-half"></ion-icon>
+                                </div>
+                                <p>"Me encantó el resultado de mi nuevo look. Los estilistas son verdaderos artistas y el ambiente es muy acogedor."</p>
+                                <div class="testimonial-author">
+                                    <img src="img/client2.jpg" alt="Cliente 2">
+                                    <span>Carlos Rodríguez</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </article>
+                </section>
 
-                <!-- Sala Sur -->
-                <article class="sala-item">
-                    <div class="sala-header">
-                        <h3>Sala Sur</h3>
+                <!-- CTA Section -->
+                <section class="cta-section">
+                    <div class="cta-content">
+                        <h2>¿Listo para renovar tu imagen?</h2>
+                        <p>Reserva ahora y obtén un 15% de descuento en tu primer servicio</p>
+                        <a href="reservas.html" class="cta-button">Reservar Cita</a>
                     </div>
-                    <div class="sala-content">
-                        <div class="sala-image">
-                            <img src="img/sala2.jpg" alt="Foto de la Sala Sur">
-                        </div>
-                        <div class="sala-description">
-                            <p>La Sala Sur es una sala de belleza y peluquería moderna y confortable, ubicada en el área sur de nuestra ubicación. Nuestra Sala Sur ofrece un amplio rango de servicios de belleza y peluquería.</p>
+                </section>
 
-                            <div class="services-table">
-                                <h4>Servicios e Instalaciones</h4>
-                                <ul class="services-list">
-                                    <li>Corte de cabello</li>
-                                    <li>Peinado</li>
-                                    <li>Manicura</li>
-                                    <li>Pedicura</li>
-                                    <li>Tinte y color</li>
-                                    <li>Depilación</li>
-                                    <li>Maquillaje</li>
-                                    <li>Tratamiento capilar</li>
-                                </ul>
+                <!-- Footer -->
+                <footer class="main-footer">
+                    <div class="footer-content">
+                        <div class="footer-info">
+                            <div class="footer-logo">
+                                <ion-icon name="cut-outline"></ion-icon>
+                                <span>Corte &amp; Arte</span>
                             </div>
+                            <p>Tu salón de belleza de confianza desde 2010</p>
+                        </div>
+                        
+                        <div class="footer-contact">
+                            <h4>Contacto</h4>
+                            <p><ion-icon name="location-outline"></ion-icon> Calle Principal 123, Ciudad</p>
+                            <p><ion-icon name="call-outline"></ion-icon> +34 123 456 789</p>
+                            <p><ion-icon name="mail-outline"></ion-icon> contacto@corteandarte.com</p>
+                        </div>
+                        
+                        <div class="footer-hours">
+                            <h4>Horario</h4>
+                            <p>Lunes a Viernes: 9:00 - 20:00</p>
+                            <p>Sábados: 10:00 - 18:00</p>
+                            <p>Domingos: Cerrado</p>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/corteandarte" class="social-icon">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a href="https://www.instagram.com/corteandarte" class="social-icon">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                            <a href="https://twitter.com/corteandarte" class="social-icon">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
                         </div>
                     </div>
-                </article>
-            </section>
-
-            <!-- Footer -->
-            <footer class="main-footer">
-                <div class="footer-content">
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/corteandarte" class="social-icon">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                        <a href="https://www.instagram.com/corteandarte" class="social-icon">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                        <a href="https://twitter.com/corteandarte" class="social-icon">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
+                    <div class="footer-bottom">
+                        <p>© 2025 Corte &amp; Arte - Todos los derechos reservados</p>
                     </div>
-                    <p>© 2025 Corte &amp; Arte - <a href="mailto:contacto@corteandarte.com">contacto@corteandarte.com</a></p>
-                </div>
-            </footer>
-        </main>
-    </div>
+                </footer>
+            </main>
+        </div>
 </body>
 </html>
